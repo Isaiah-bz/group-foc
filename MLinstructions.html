@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 7: Machine Language Instructions Converter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+/* --- Core Styling from project.html --- */
+body {
+    font-family: "Times New Roman", Georgia, Serif; 
+    margin-top: 50px; 
+    color: #333; 
+    text-align: center; 
+    overflow-x: hidden; 
+} 
+h3 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; 
+    background-size: cover;
+    overflow: hidden;
+}
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+}
+.content-card {
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 32px;
+    border-radius: 20px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    margin-bottom: 30px; 
+    display: flex; /* Use flex to manage layout */
+    flex-direction: column;
+}
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+/* --- Custom Styles --- */
+.instruction-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.buttons-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.images-column {
+    padding: 20px;
+}
+.button {
+  background-color: #008CBA; /* Blue */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #00567a;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+#MLinstrucitons {
+    width: 400px;
+}
+#Englishinstrucitons {
+    width: 400px;
+}
+/* --- Back Button Style --- */
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #5C6F7F; /* A distinct, project-like color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.back-button:hover {
+    background-color: #3C455A;
+}
+</style>
+</head>
+<body>
+
+<video autoplay loop muted id="video-background">
+ <source src="damascus.mp4" type="video/mp4">
+</video>
+<div id="video-overlay"></div>
+
+<div class="main-content">
+  <div class="content-card">
+    <h3>Project 7: A Simple Interactive Machine Language</h3>
+    <hr>
+    
+    <div class="instruction-container">
+        <div class="buttons-column">
+            <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML1.png'; document.getElementById('Englishinstrucitons').src='EI1.png'">156C</button>
+            <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML2.png'; document.getElementById('Englishinstrucitons').src='EI2.png'">166D</button>
+            <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML3.png'; document.getElementById('Englishinstrucitons').src='EI3.png'">5056</button>
+            <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML4.png'; document.getElementById('Englishinstrucitons').src='EI4.png'">306E</button>
+            <button class="button" onclick="document.getElementById('MLinstrucitons').src='ML5.png'; document.getElementById('Englishinstrucitons').src='EI5.png'">C000</button>
+        </div>
+        <div class="images-column">
+            <img id="MLinstrucitons" src="MLblank.png" alt="Machine Language Instruction">
+            <img id="Englishinstrucitons" src="" alt="English Translation">
+        </div>
+    </div>
+    
+    <a href="project.html" class="back-button">Back to Projects</a>
+  </div>
+</div>
+
+
+</body>
+</html>

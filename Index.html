@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title>Fundamental of Computing (foC)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+/* Base Styles (Matched to concept.html) */
+body {
+    font-family: "Times New Roman", Georgia, Serif; 
+    margin-top: 50px; 
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+} 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+/* Style for the fixed navbar */
+.w3-top {
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* Consistent Navbar Text Size and Style */
+.w3-bar .w3-bar-item {
+    font-size: 18px;
+    padding: 12px 16px;
+}
+.logo {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 22px !important;
+}
+/* --- VIDEO BACKGROUND STYLES (Matched to concept.html) --- */
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+/* --- CONTENT STYLES (Matched to concept.html) --- */
+/* Page content */
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    max-width:1100px;
+    margin: auto;
+}
+/* Card container - Semi-transparent white - UPDATED to match Dev Team card style */
+.content-card {
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 32px; /* Base padding from CSS */
+    /* Updated to Dev team card style */
+    border-radius: 20px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    margin-bottom: 30px; 
+}
+
+/* Added hover effect from Dev team.html */
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* Styling for the image opacity/hover from original Index.html, kept for visual feature */
+.w3-image-opacity-min {
+    opacity: 0.85; 
+    transition: opacity 0.3s;
+}
+.w3-image-opacity-min:hover {
+    opacity: 1.0;
+}
+</style>
+<body>
+
+<video autoplay loop muted id="video-background">
+  <source src="damascus.mp4" type="video/mp4">
+  
+</video>
+<div id="video-overlay"></div>
+
+<nav class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <span class="w3-bar-item logo">Fundamentals of Computing</span>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button w3-text-green">Course</a>
+      <a href="project.html" class="w3-bar-item w3-button">Project</a>
+	  <a href="concept.html" class="w3-bar-item w3-button">Concepts</a>
+      <a href="Databasese.html" class="w3-bar-item w3-button">Databases</a>
+      <a href="documentation.html" class="w3-bar-item w3-button">Documentation</a>
+      <a href="Dev team.html" class="w3-bar-item w3-button">Dev Team</a>
+    </div>
+  </div>
+</nav>
+
+<div class="w3-content main-content">
+
+  <div class="w3-center w3-margin-top">
+    <a href="https://ub.edu.bz/" target="_blank">
+      <img src="UB.png" alt="UB logo" class="w3-round" style="width:250px;height:250px;">
+    </a>
+  </div>
+  
+  <hr>
+
+  <div class="content-card w3-padding-64" id="about"> 
+    <h1 class="w3-xxlarge w3-center">Fundamental of Computing</h1>
+    
+    <div class="w3-row"> 
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="pc.jpg" class="w3-round w3-image-opacity-min" alt="computer setting" width="100%" height="auto">
+        </div>
+
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">About Course</h1><br>
+          <p class="w3-large">This course is an introduction to the fundamentals of Computer Science that will provide students with a foundation for future courses in Computer Science. The course is a broad survey of the discipline through topics that allow students to understand the importance of computing in modern life and the ethical responsibilities of computer professionals. You will learn about core topics like algorithms, which are step-by-step procedures for solving problems. The course also teaches you how computers represent all information, such as text and images, using binary notation (zeros and ones). Additionally, you will study how computers work inside. This includes understanding the main parts like the CPU and memory, and how the Internet and networks function globally.</p>
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
