@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FoC - Documentation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+/* Base Styles (Matched to Index.html) */
+body {
+    font-family: "Times New Roman", Georgia, Serif; 
+    margin-top: 50px;
+} 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+/* Style for the fixed navbar */
+.w3-top {
+  position: fixed; 
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* Consistent Navbar Text Size and Style */
+.w3-bar .w3-bar-item {
+    font-size: 18px;
+    padding: 12px 16px; 
+}
+.logo {
+    font-weight: bold;
+    color: #4CAF50; /* Highlighted logo color */
+    font-size: 22px !important;
+}
+/* --- VIDEO BACKGROUND STYLES (From Index.html) --- */
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; 
+    background-size: cover;
+    overflow: hidden;
+}
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: -1; 
+}
+/* --- CONTENT STYLES (From Index.html) --- */
+/* Custom style for main page content */
+.main-content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: transparent; 
+    position: relative; 
+    z-index: 2; 
+    max-width:1100px;
+    margin: auto;
+}
+/* Standardized Content Container - Semi-transparent white (From Index.html) */
+.content-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+</style>
+</head>
+<body>
+
+<video autoplay loop muted id="video-background">
+  <source src="damascus.mp4" type="video/mp4">
+</video>
+<div id="video-overlay"></div>
+
+<nav class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <span class="w3-bar-item logo">Fundamentals of Computing</span>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Course</a>
+      <a href="project.html" class="w3-bar-item w3-button">Project</a>
+      <a href="concept.html" class="w3-bar-item w3-button">Concepts</a>
+      <a href="database.html" class="w3-bar-item w3-button">Databases</a>
+      <a href="documentation.html" class="w3-bar-item w3-button w3-text-green">Documentation</a>
+      <a href="dev_team.html" class="w3-bar-item w3-button">Dev Team</a>
+    </div>
+  </div>
+</nav>
+
+<div class="w3-content main-content" style="max-width:1100px">
+  <div class="content-card w3-center w3-padding-64">
+    <h1 class="w3-xlarge">Technical Documentation</h1>
+    <hr>
+    
+    <a href="https://drive.google.com/file/d/1emYNyAIPOih0PMWEr-woOZiIIOPaUv4t/view" target="_blank">
+        <img 
+            src="file.png" 
+            alt="Link to Google Drive Documentation File" 
+            class="w3-image w3-round" 
+            style="width: 100%; max-width: 20%; height: auto; margin-top: 5px; border: 4px solid #ccc;"
+        >
+    </a>
+    
+    <p class="w3-large w3-margin-top">Click the image above to view the documentation file on Google Drive.</p>	  
+  </div>
+</div>
+
+
+</body>
+</html>
