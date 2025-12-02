@@ -72,7 +72,7 @@
 
     /* Custom styles for the Dev Card */
     .dev-card-container {
-      min-height: 100vh; 
+      min-height: 100vh; /* Use min-height to center content vertically on the viewport */
       display: flex;
       flex-direction: row; 
       flex-wrap: wrap; 
@@ -88,6 +88,7 @@
     .dev-card {
       max-width: 45%; 
       min-width: 300px; 
+      /* Removed flex-grow: 1; to allow fixed height to work better */
       height: 450px; /* FIXED HEIGHT ADDED HERE */
       background: rgba(255, 255, 255, 0.85); 
       border-radius: 20px;
@@ -122,8 +123,8 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        flex-grow: 1; 
-        justify-content: space-between; 
+        flex-grow: 1; /* Allows content area to fill remaining space */
+        justify-content: space-between; /* Pushes the button/text to the bottom */
     }
     
     .profile-image {
@@ -139,21 +140,21 @@
     .profile-text {
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center; /* Center items inside profile-text */
         width: 100%;
-        text-align: center; 
+        text-align: center; /* Center the text */
     }
 
     .profile-text p {
         font-size: 1.1rem;
         line-height: 1.7;
-        margin-bottom: 20px; 
+        margin-bottom: 20px; /* Space above the button */
     }
 
     /* NEW BUTTON STYLE */
-    .about-me-button, .project-link-button {
-        background-color: #4CAF50; 
-        color: white; 
+    .about-me-button {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
         border-radius: 8px;
         padding: 10px 20px;
         text-decoration: none;
@@ -161,13 +162,12 @@
         transition: background-color 0.3s;
         border: none;
         cursor: pointer;
-        display: inline-block; 
-        margin-top: auto; 
-        margin-bottom: 10px; /* Adjust spacing for the new button */
+        display: inline-block; /* Essential for w3-button styling */
+        margin-top: auto; /* Pushes button to the bottom of the flex container */
     }
 
-    .about-me-button:hover, .project-link-button:hover {
-        background-color: #45a049; 
+    .about-me-button:hover {
+        background-color: #45a049; /* Darker green on hover */
     }
     
     @media (min-width: 640px) {
@@ -177,18 +177,8 @@
             gap: 30px;
         }
         .profile-text {
-            align-items: flex-start; 
+            align-items: flex-start; /* Revert alignment for larger screens */
             text-align: left;
-        }
-        /* Added style for the new button's wrapper to make it full width */
-        .project-link-wrapper {
-            flex-basis: 100%; /* Make the wrapper take up a full row */
-            text-align: center;
-            margin-top: 30px;
-        }
-        .project-link-button {
-            font-size: 1.2rem;
-            padding: 15px 30px;
         }
     }
 
@@ -240,10 +230,8 @@
                 <p>
                     Hello! My name is <strong>Isaiah Morales</strong>. I come from Benque Viejo Del Carmen, Cayo Distrct. Currently studing to obtain my Associate degree in Informational of Technology in University Of Belize (AINT), My hobbies are Gaming, Driving and 3d modeling. My favourite food is ceviche.
                 </p>
-                <div class="w3-row w3-stretch" style="width: 100%; display: flex; justify-content: space-around; margin-top: auto;">
-                    <a href="https://isaiah-bz.github.io/FOC_project/index.html" class="w3-button about-me-button" style="margin: 0; flex-grow: 1; margin-right: 5px;">About Me</a>
-                </div>
-                            </div>
+                <a href=" https://isaiah-bz.github.io/FOC_project/index.html" class="w3-button about-me-button">About Me</a>
+            </div>
         </div>
     </div>
 
@@ -264,5 +252,3 @@
 </body>
 
 </html>
-
-
