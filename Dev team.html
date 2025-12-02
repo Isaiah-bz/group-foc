@@ -1,253 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fundamentals of Computing - Dev Team</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals of Computing - Dev Team</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* Base Styles (Matched to Index.html) */
-    body {
-      font-family: "Times New Roman", Georgia, Serif; 
-      color: #333;
-      text-align: center;
-      overflow-x: hidden;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Playfair Display";
-      letter-spacing: 5px;
-    }
+    /* Base Styles (Matched to Index.html) */
+    body {
+      font-family: "Times New Roman", Georgia, Serif; 
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
 
-    /* Style for the fixed navbar */
-    .w3-top {
-      position: fixed; 
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    
-    /* Consistent Navbar Text Size and Style */
-    .w3-bar .w3-bar-item {
-        font-size: 18px;
-        padding: 12px 16px; 
-    }
-    .logo {
-        font-weight: bold;
-        color: #4CAF50; 
-        font-size: 22px !important;
-    }
+    /* Style for the fixed navbar */
+    .w3-top {
+      position: fixed; 
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    /* Consistent Navbar Text Size and Style */
+    .w3-bar .w3-bar-item {
+        font-size: 18px;
+        padding: 12px 16px; 
+    }
+    .logo {
+        font-weight: bold;
+        color: #4CAF50; 
+        font-size: 22px !important;
+    }
 
-    /* --- VIDEO BACKGROUND STYLES (From Index.html) --- */
-    #video-background {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%; 
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1; 
-        background-size: cover;
-        overflow: hidden;
-    }
-    #video-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.4); 
-        z-index: -1; 
-    }
-    /* ------------------------------------------- */
+    /* --- VIDEO BACKGROUND STYLES (From Index.html) --- */
+    #video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1; 
+        background-size: cover;
+        overflow: hidden;
+    }
+    #video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4); 
+        z-index: -1; 
+    }
+    /* ------------------------------------------- */
 
-    /* Custom styles for the Dev Card */
-    .dev-card-container {
-      min-height: 100vh; /* Use min-height to center content vertically on the viewport */
-      display: flex;
-      flex-direction: row; 
-      flex-wrap: wrap; 
-      gap: 40px; 
-      justify-content: center; 
-      align-items: center; 
-      padding: 100px 20px 80px 20px;
-      z-index: 2;
-      position: relative;
-    }
+    /* Custom styles for the Dev Card */
+    .dev-card-container {
+      min-height: 100vh; 
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: wrap; 
+      gap: 40px; 
+      justify-content: center; 
+      align-items: center; 
+      padding: 100px 20px 80px 20px;
+      z-index: 2;
+      position: relative;
+    }
 
-    /* The main card element - Fixed height and max-width adjusted */
-    .dev-card {
-      max-width: 45%; 
-      min-width: 300px; 
-      /* Removed flex-grow: 1; to allow fixed height to work better */
-      height: 450px; /* FIXED HEIGHT ADDED HERE */
-      background: rgba(255, 255, 255, 0.85); 
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-      color: #333; 
-      text-align: left;
-      transition: all 0.3s ease;
-      display: flex; /* Added flex to manage internal content layout */
-      flex-direction: column;
-    }
-    
-    /* Hover effect for a subtle lift */
-    .dev-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-    }
+    /* The main card element - Fixed height and max-width adjusted */
+    .dev-card {
+      max-width: 45%; 
+      min-width: 300px; 
+      height: 450px; /* FIXED HEIGHT ADDED HERE */
+      background: rgba(255, 255, 255, 0.85); 
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      color: #333; 
+      text-align: left;
+      transition: all 0.3s ease;
+      display: flex; /* Added flex to manage internal content layout */
+      flex-direction: column;
+    }
+    
+    /* Hover effect for a subtle lift */
+    .dev-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    }
 
-    .dev-card h1 {
-      font-family: "Playfair Display", serif;
-      letter-spacing: 5px; 
-      font-size: 2.5rem;
-      color: #4CAF50; 
-      border-bottom: 2px solid #4CAF50;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+    .dev-card h1 {
+      font-family: "Playfair Display", serif;
+      letter-spacing: 5px; 
+      font-size: 2.5rem;
+      color: #4CAF50; 
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-    .profile-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        flex-grow: 1; /* Allows content area to fill remaining space */
-        justify-content: space-between; /* Pushes the button/text to the bottom */
-    }
-    
-    .profile-image {
-        border-radius: 50%; 
-        border: 5px solid #4CAF50;
-        box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        flex-shrink: 0;
-    }
+    .profile-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        flex-grow: 1; 
+        justify-content: space-between; 
+    }
+    
+    .profile-image {
+        border-radius: 50%; 
+        border: 5px solid #4CAF50;
+        box-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
 
-    .profile-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items inside profile-text */
-        width: 100%;
-        text-align: center; /* Center the text */
-    }
+    .profile-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        text-align: center; 
+    }
 
-    .profile-text p {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        margin-bottom: 20px; /* Space above the button */
-    }
+    .profile-text p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 20px; 
+    }
 
-    /* NEW BUTTON STYLE */
-    .about-me-button {
-        background-color: #4CAF50; /* Green background */
-        color: white; /* White text */
-        border-radius: 8px;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s;
-        border: none;
-        cursor: pointer;
-        display: inline-block; /* Essential for w3-button styling */
-        margin-top: auto; /* Pushes button to the bottom of the flex container */
-    }
+    /* NEW BUTTON STYLE */
+    .about-me-button, .project-link-button {
+        background-color: #4CAF50; 
+        color: white; 
+        border-radius: 8px;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        border: none;
+        cursor: pointer;
+        display: inline-block; 
+        margin-top: auto; 
+        margin-bottom: 10px; /* Adjust spacing for the new button */
+    }
 
-    .about-me-button:hover {
-        background-color: #45a049; /* Darker green on hover */
-    }
-    
-    @media (min-width: 640px) {
-        .profile-content {
-            flex-direction: row;
-            align-items: flex-start;
-            gap: 30px;
-        }
-        .profile-text {
-            align-items: flex-start; /* Revert alignment for larger screens */
-            text-align: left;
-        }
-    }
+    .about-me-button:hover, .project-link-button:hover {
+        background-color: #45a049; 
+    }
+    
+    @media (min-width: 640px) {
+        .profile-content {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .profile-text {
+            align-items: flex-start; 
+            text-align: left;
+        }
+        /* Added style for the new button's wrapper to make it full width */
+        .project-link-wrapper {
+            flex-basis: 100%; /* Make the wrapper take up a full row */
+            text-align: center;
+            margin-top: 30px;
+        }
+        .project-link-button {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+        }
+    }
 
 
-    /* Footer (Kept for function) */
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 10px;
-      z-index: 10;
-      color: #333;
-      font-size: 0.9rem;
-    }
+    /* Footer (Kept for function) */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 10px;
+      z-index: 10;
+      color: #333;
+      font-size: 0.9rem;
+    }
 
-  </style>
-  
+  </style>
+  
 </head>
 <body>
 
 <video autoplay loop muted id="video-background">
-  <source src="damascus.mp4" type="video/mp4">
+  <source src="damascus.mp4" type="video/mp4">
 </video>
 <div id="video-overlay"></div>
 
 <nav class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <span class="w3-bar-item logo">Fundamentals of Computing</span>
-    <div class="w3-right w3-hide-small">
-      <a href="index.html" class="w3-bar-item w3-button">Course</a>
-      <a href="project.html" class="w3-bar-item w3-button">Project</a>
-      <a href="concept.html" class="w3-bar-item w3-button">Concepts</a>
-      <a href="Databasese.html" class="w3-bar-item w3-button">Databases</a>
-      <a href="Documentation.html" class="w3-bar-item w3-button">Documentation</a>
-      <a href="Dev team.html" class="w3-bar-item w3-button w3-text-green">Dev Team</a>
-    </div>
-  </div>
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <span class="w3-bar-item logo">Fundamentals of Computing</span>
+    <div class="w3-right w3-hide-small">
+      <a href="index.html" class="w3-bar-item w3-button">Course</a>
+      <a href="project.html" class="w3-bar-item w3-button">Project</a>
+      <a href="concept.html" class="w3-bar-item w3-button">Concepts</a>
+      <a href="Databasese.html" class="w3-bar-item w3-button">Databases</a>
+      <a href="Documentation.html" class="w3-bar-item w3-button">Documentation</a>
+      <a href="Dev team.html" class="w3-bar-item w3-button w3-text-green">Dev Team</a>
+    </div>
+  </div>
 </nav>
-  
+  
 <div class="dev-card-container">
-    <div class="dev-card">
-        <h1>Member 1</h1>
-        <div class="profile-content">
-            <img src="Isaiah.jpg" alt="Isaiah Morales" class="profile-image">
-            <div class="profile-text">
-                <p>
-                    Hello! My name is <strong>Isaiah Morales</strong>. I come from Benque Viejo Del Carmen, Cayo Distrct. Currently studing to obtain my Associate degree in Informational of Technology in University Of Belize (AINT), My hobbies are Gaming, Driving and 3d modeling. My favourite food is ceviche.
-                </p>
-                <a href="isaiah-about.html" class="w3-button about-me-button">About Me</a>
-            </div>
-        </div>
-    </div>
+    <div class="dev-card">
+        <h1>Member 1</h1>
+        <div class="profile-content">
+            <img src="Isaiah.jpg" alt="Isaiah Morales" class="profile-image">
+            <div class="profile-text">
+                <p>
+                    Hello! My name is <strong>Isaiah Morales</strong>. I come from Benque Viejo Del Carmen, Cayo Distrct. Currently studing to obtain my Associate degree in Informational of Technology in University Of Belize (AINT), My hobbies are Gaming, Driving and 3d modeling. My favourite food is ceviche.
+                </p>
+                <a href="isaiah-about.html" class="w3-button about-me-button">About Me</a>
+            </div>
+        </div>
+    </div>
 
-    <div class="dev-card">
-        <h1>Member 2</h1>
-        <div class="profile-content">
-            <img src="me.jpg" alt="Insieni Lacayo" class="profile-image">
-            <div class="profile-text">
-                <p>
-                    Hi, I'm <strong>Insieni Lacayo</strong>. I eat a lot, and my hobbies are mostly gaming. I am also currently studying to obtain my Associate degree in Informational of Technology in the University Of Belize (AINT).
-                </p>
-                <a href="insieni-about.html" class="w3-button about-me-button">About Me</a>
-            </div>
-        </div>
+    <div class="dev-card">
+        <h1>Member 2</h1>
+        <div class="profile-content">
+            <img src="me.jpg" alt="Insieni Lacayo" class="profile-image">
+            <div class="profile-text">
+                <p>
+                    Hi, I'm <strong>Insieni Lacayo</strong>. I eat a lot, and my hobbies are mostly gaming. I am also currently studying to obtain my Associate degree in Informational of Technology in the University Of Belize (AINT).
+                </p>
+                <a href="insieni-about.html" class="w3-button about-me-button">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-link-wrapper">
+        <a href="https://isaiah-bz.github.io/FOC_project/index.html" target="_blank" class="w3-button project-link-button">
+            View the FOC Final Project Site
+        </a>
     </div>
-</div>
+    </div>
 
 </body>
 
